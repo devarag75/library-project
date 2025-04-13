@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background-color: #2c3e50;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .sidebar h2 {
+      color: white;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      background-color: #34495e;
+      color: white;
+      padding: 15px 20px;
+      margin: 6px 15px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #1abc9c;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 240px;
+      padding: 40px;
+      flex-grow: 1;
+    }
+
+    header {
+      background-color: #2980b9;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+      }
+
+      .sidebar h2 {
+        display: none;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>📘 Library</h2>
+    <a href="search.html">🔍 Search Resources</a>
+    <a href="resources.html">📚 All Resources</a>
+    <a href="borrow.html">📨 Borrow Request</a>
+    <a href="readers.html">👥 Library Readers</a>
+    <a href="profile.html">🙍‍♂️ Profile</a>
+    <a href="settings.html">⚙️ Settings</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <header>
+      <h1>Welcome to the Library Dashboard</h1>
+      <p>Use the sidebar to navigate through the system.</p>
+    </header>
+    <p>This is your dashboard homepage. Click the sidebar buttons to go to other pages.</p>
+  </div>
+
+</body>
+</html>

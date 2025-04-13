@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background-color: #2c3e50;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .sidebar h2 {
+      color: white;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      background-color: #34495e;
+      color: white;
+      padding: 15px 20px;
+      margin: 6px 15px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #1abc9c;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 240px;
+      padding: 40px;
+      flex-grow: 1;
+    }
+
+    header {
+      background-color: #2980b9;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    form {
+      margin-top: 30px;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"], input[type="password"], select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1abc9c;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+      }
+
+      .sidebar h2 {
+        display: none;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>📘 Library</h2>
+    <a href="search.html">🔍 Search Resources</a>
+    <a href="resources.html">📚 All Resources</a>
+    <a href="borrow.html">📨 Borrow Request</a>
+    <a href="readers.html">👥 Library Readers</a>
+    <a href="profile.html">🙍‍♂️ Profile</a>
+    <a href="settings.html">⚙️ Settings</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <header>
+      <h1>⚙️ Settings</h1>
+      <p>Manage your account and preferences</p>
+    </header>
+
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter new username">
+
+      <label for="password">New Password:</label>
+      <input type="password" id="password" placeholder="Enter new password">
+
+      <label for="notifications">Email Notifications:</label>
+      <select id="notifications">
+        <option value="enabled">Enabled</option>
+        <option value="disabled">Disabled</option>
+      </select>
+
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+
+</body>
+</html>
