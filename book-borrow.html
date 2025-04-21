@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Borrow Book</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .book-info {
+      display: flex;
+      gap: 20px;
+    }
+    .book-img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+    input, textarea, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+    }
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Borrow Book</h1>
+  <div class="book-info">
+    <img id="bookImage" class="book-img" src="" alt="Book Cover">
+    <div>
+      <h2 id="bookTitle">Book Title</h2>
+      <p id="bookDescription">Book Description</p>
+    </div>
+  </div>
+
+  <h3>Borrow Form</h3>
+  <form onsubmit="alert('Borrow request submitted! (Frontend only)'); return false;">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Why do you want this book? (Optional)"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("bookTitle").textContent = params.get("title");
+  document.getElementById("bookDescription").textContent = params.get("desc");
+  document.getElementById("bookImage").src = params.get("image");
+</script>
+
+</body>
+</html>
