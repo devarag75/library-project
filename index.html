@@ -15,6 +15,10 @@
       display: flex;
       min-height: 100vh;
       background-color: #f2f2f2;
+      background-image: url('home/360_F_986792010_P8AubuB5ERV0gP91Szf5iyszWxB7OxXn.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     /* Sidebar */
@@ -83,13 +87,8 @@
         padding: 20px;
       }
     }
-  body {
-    background-image: url('home/360_F_986792010_P8AubuB5ERV0gP91Szf5iyszWxB7OxXn.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-     /* Your feedback button CSS here */
+
+    /* Feedback button */
     #feedback-btn {
         position: fixed;
         bottom: 20px;
@@ -102,15 +101,19 @@
         border-radius: 5px;
         cursor: pointer;
         z-index: 1000;
+        text-decoration: none;
+        display: inline-block;
     }
 
     #feedback-btn:hover {
         background-color: #0056b3;
     }
- </style>
+  </style>
 </head>
 <body>
-  <button id="feedback-btn">Feedback</button>
+
+  <!-- Feedback Button -->
+  <a id="feedback-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSed4jmpOVCpRdpRvN1zFe4q1BJKvZ65vFnp94Aj1_Whe_PsGQ/viewform?usp=header" target="_blank">Feedback</a>
 
   <!-- Sidebar -->
   <div class="sidebar">
